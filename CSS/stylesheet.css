@@ -1,0 +1,21 @@
+ #container {
+        background-color: #f5afd2;
+        height: 640px;
+        width: 640px;
+        margin: auto;
+      }
+      .unit {
+        border: 1px solid #fff;
+        box-sizing: border-box;
+        display: inline-block;
+        float: left;
+      }
+      body {
+        font-family: arial,sans-serif;
+        font-size: small;
+        color: #222;
+      }
+      #header {
+        margin-bottom: 20px;
+        text-align: center;
+      }

@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <script src="JS/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <button onclick="myFunction()">Reset</button>
+    </div>
+    <div id="container"></div>
+    <script>
+      function myFunction() {
+        $('#container').empty();
+        var size = prompt("Please enter the grid size");
+        gridMaker(size);
+        gridFill();
+      }
+      $(document).ready(function() {
+        gridMaker(16);
+        gridFill();
+      });
+
+      function gridMaker(num){
+        var wid = 640/num;
+        var hei = 640/num;
+        for(var x = 0; x < num * num; x++) {
+          var unit = $("<div class='unit'></div>");
+          unit.appendTo('#container');
+        }
+        $('.unit').css({ width : wid });
+        $('.unit').css({ height : hei});
+      }
+
+      function gridFill(){
+        $('.unit').hover(function(){
+            $(this).css("background-color", "#9c8c90");
+        });
+      }
+    </script>
+  </body>
+</html>
